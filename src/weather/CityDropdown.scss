@@ -1,0 +1,14 @@
+.card-title{
+  font-size: 28px;
+}
+
+.custom-select {
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background: url("/icons_UI/pull-down.png") no-repeat scroll right center transparent !important;
+  background-size: 17px !important;
+  background-position-x: calc(100% - 15px) !important;
+  background-color: rgb(236, 234, 234) !important;
+  font-size: 28px;
+}

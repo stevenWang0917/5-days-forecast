@@ -1,0 +1,44 @@
+.card-border {
+  border: 8px solid #414850;
+
+  .card-header{
+    padding-left: 28px;
+  }
+
+  .card-block {
+    padding: 50px 28px 10px 28px;
+
+    .button-text {
+      font-size: 28px;
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+
+  &:before, &:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 38px;
+    width: 2px;
+    background-color: #fff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.close-icon {
+  width: 50px;
+  height: 50px;
+}
