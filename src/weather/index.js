@@ -15,21 +15,21 @@ export default class Weather extends Component{
     }
   }
 
-  weatherData = () => 
+  _weatherData = () => 
     fetchWeatherData(API, this.state.currentCity, COUNTRY_CODE, DAYS, API_KEY)
       .then(data => this.setState({ fiveDaysForecast: data }));
 
   /* When change a city, fetch weather data of that city. */
   handleCityChange = (e) =>
-    this.setState({ currentCity: e.target.value }, ()=>{ this.weatherData() })
+    this.setState({ currentCity: e.target.value }, ()=>{ this._weatherData() })
 
   /* When press "Apply" button, fetch new weather data. */
-  handleClick = () => this.weatherData()
+  handleClick = () => this._weatherData()
 
   /* When press "x" close button on top right corner. */
   handleClose = () => { /* do something in the future */ }
 
-  componentDidMount = () => this.weatherData()
+  componentDidMount = () => this._weatherData()
 
   render() {
     const { fiveDaysForecast, currentCity } = this.state;
